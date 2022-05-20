@@ -475,10 +475,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia: ;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .flex {
   display: flex;
 }
@@ -503,20 +499,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50vw;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .items-center {
   align-items: center;
 }
 
 .justify-center {
   justify-content: center;
-}
-
-.self-center {
-  align-self: center;
 }
 
 .text-2xl {
