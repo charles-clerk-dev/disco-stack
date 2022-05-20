@@ -7,6 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { rootAuthLoader } from "@clerk/remix/ssr.server";
+import { LoaderFunctionArgs } from "@clerk/remix/src/ssr/types";
+import { ClerkApp, ClerkCatchBoundary } from "@clerk/remix";
 import styles from "./styles/app.css";
 
 export function links() {
@@ -19,7 +22,11 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-export default function App() {
+export const loader = (args: LoaderFunctionArgs) => rootAuthLoader(args);
+
+export const CatchBoundary = ClerkCatchBoundary();
+
+function App() {
   return (
     <html lang="en">
       <head>
@@ -35,3 +42,5 @@ export default function App() {
     </html>
   );
 }
+
+export default ClerkApp(App);
