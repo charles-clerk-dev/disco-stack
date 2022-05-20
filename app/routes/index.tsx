@@ -1,6 +1,6 @@
 import { SignedOut, SignedIn, SignIn } from "@clerk/remix";
 
-export default function Index() {
+const Index = () => {
   return (
     <div className="w-screen h-screen">
       <main className="flex items-center justify-center min-h-screen">
@@ -15,4 +15,6 @@ export default function Index() {
       </main>
     </div>
   );
-}
+};
+
+export default Index;
